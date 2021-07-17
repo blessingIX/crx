@@ -1,0 +1,53 @@
+{
+  "background": {
+    "scripts": [
+      "background.js",
+      "analytics.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "css": [
+        "content.css"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "128": "icons/icon-128.png",
+      "48": "icons/icon-48.png",
+      "16": "icons/icon-16.png"
+    },
+    "default_popup": "popup/index.html",
+    "default_title": "__MSG_app_name__"
+  },
+  "default_locale": "en",
+  "description": "__MSG_app_desc__",
+  "icons": {
+    "128": "icons/icon-128.png",
+    "48": "icons/icon-48.png",
+    "16": "icons/icon-16.png"
+  },
+  "manifest_version": 2,
+  "name": "__MSG_app_name__",
+  "permissions": [
+    "tabCapture",
+    "tabs",
+    "storage",
+    "<all_urls>"
+  ],
+  "version": "0.56.0",
+  "web_accessible_resources": [
+    "*.css",
+    "/img/sphere.svg"
+  ],
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://*.googleapis.com; object-src 'self'",
+  "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx"
+}

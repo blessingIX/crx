@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+#loudly_indicator, #loudly_indicator * {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	line-height: 1;
+}
+
+#loudly_indicator {
+	width: 80px;
+	height: 36px;
+	border-radius: 25px !important;
+	background: white !important;
+	border: 1px solid #7C56E8 !important;
+
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	flex-flow: row nowrap !important;
+
+	position: fixed;
+	right: 15px;
+	bottom: 35px;
+}
+
+#loudly_indicator img {
+	margin-right: 4px !important;
+}
+
+#loudly_indicator #loudly-percentage {
+	font-size: 16px;
+	line-height: 14px;
+	color: #7C56E8;
+	font-family: Montserrat;
+	font-weight: bold;
+}

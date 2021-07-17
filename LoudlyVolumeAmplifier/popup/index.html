@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="./css/switcher.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="/img/logo.png" id="logo">
+        <div class="custom-control custom-switch custom-switch-md" style="position: absolute; right: 16px; top: 16px;">
+            <input class="form-check-input" type="checkbox" id="ext-status" checked>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="slider-container">
+            <input id="volume" type="range" value="100" min="0" max="600">
+            <label for="volume" id="volume-value"></label>
+            <h1 id="percentage">100%</h1>
+        </div>
+
+        <div class="scope">
+            <div class="button" data-scope="current-tab">Only on current url</div>
+            <div class="button" data-scope="current-website">Always on current website</div>
+            <div class="button" data-scope="any-website">Always on any website</div>
+        </div>
+    </div>
+
+    <div class="disabled-content">
+        <div class="line"></div>
+        <h1 id="percentage-template">100%</h1>
+    </div>
+
+    <script src="/lib/jquery/jquery.js"></script>
+    <script src="/lib/jquery/jquery.switcher.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+.ui-switcher {
+  background: #7C56E8;
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  height: 26px;
+  width: 56px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  transition: background-color 0.25s;
+}
+
+.ui-switcher:hover {
+  background: #734fd6;
+}
+
+.ui-switcher[aria-checked=false] {
+  background: #E1457D;
+}
+
+.ui-switcher:before {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 12px;
+  color: white;
+  line-height: 1;
+  display: inline-block;
+  position: absolute;
+  top: 6px;
+  height: 12px;
+  width: 20px;
+  text-align: center;
+}
+
+.ui-switcher[aria-checked=false]:before {
+  content: 'Off';
+  right: 9px;
+  color: white;
+}
+.ui-switcher[aria-checked=true]:before {
+  content: 'On';
+  left: 8px;
+  color: white;
+}
+
+.ui-switcher:after {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  content: '\0020';
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  height: 16px;
+  width: 16px;
+  border-radius: 3px;
+  transition: left 0.25s;
+}
+.ui-switcher[aria-checked=false]:after {
+  left: 5px;
+  
+}
+.ui-switcher[aria-checked=true]:after {
+  left: 35px;
+}
