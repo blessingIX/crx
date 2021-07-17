@@ -1,0 +1,141 @@
+{
+  "name": "划词翻译",
+  "description": "简单好用的划词 / 截图 / 网页 / 音视频翻译扩展，支持谷歌、DeepL、百度、搜狗等 9 个国内外主流翻译源，且均可用于网页翻译。能在 PDF 里使用。",
+  "homepage_url": "https://hcfy.limingkai.cn",
+  "manifest_version": 2,
+  "version": "8.3.4",
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "permissions": [
+    "<all_urls>",
+    "contextMenus",
+    "storage",
+    "clipboardWrite",
+    "clipboardRead",
+    "webRequest",
+    "webRequestBlocking",
+    "alarms"
+  ],
+  "optional_permissions": [
+    "notifications"
+  ],
+  "background": {
+    "scripts": [
+      "browser-polyfill.js",
+      "vendors-b-c-ca-p-pdf-pn-s.js",
+      "vendors-b-c-p-pdf-pn-s.js",
+      "vendors-b-s.js",
+      "b-c-p-pdf-pn-s.js",
+      "b-s.js",
+      "b.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "browser-polyfill.js",
+        "vendors-b-c-ca-p-pdf-pn-s.js",
+        "vendors-b-c-p-pdf-pn-s.js",
+        "vendors-c-p-pdf-pn-s.js",
+        "vendors-c-pdf.js",
+        "b-c-p-pdf-pn-s.js",
+        "c-p-pdf-pn-s.js",
+        "c-p-pdf-pn.js",
+        "c-pdf.js",
+        "c.js"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "browser-polyfill.js",
+        "vendors-b-c-ca-p-pdf-pn-s.js",
+        "ca.js"
+      ],
+      "all_frames": true,
+      "match_about_blank": true,
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_icon": "logo.png",
+    "default_popup": "popup.html"
+  },
+  "omnibox": {
+    "keyword": "hcfy"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Q",
+        "mac": "MacCtrl+Q"
+      }
+    },
+    "translate": {
+      "suggested_key": {
+        "default": "Alt+A"
+      },
+      "description": "翻译选中的文本"
+    },
+    "translateWithPopup": {
+      "suggested_key": {
+        "default": "Alt+S"
+      },
+      "description": "使用独立窗口翻译选中的文本"
+    },
+    "panel": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+1"
+      },
+      "description": "打开独立翻译窗口",
+      "global": true
+    },
+    "screenshot": {
+      "description": "截图翻译"
+    },
+    "page": {
+      "description": "网页全文翻译"
+    },
+    "switchWeb": {
+      "description": "切换网页划词开关"
+    }
+  },
+  "web_accessible_resources": [
+    "normalize.css",
+    "cropper.css",
+    "blueprint.css",
+    "blueprint-select.css",
+    "youdao.ico",
+    "baidu.ico",
+    "google.ico",
+    "deepl.png",
+    "alilogo.png",
+    "bing.ico",
+    "qq.ico",
+    "sogou.ico",
+    "xiaoyilogo.png",
+    "logo.png",
+    "logowhite36.png",
+    "pdf-viewer/*",
+    "panel.html",
+    "vendors-b-c-ca-p-pdf-pn-s.js",
+    "vendors-b-c-p-pdf-pn-s.js",
+    "vendors-c-p-pdf-pn-s.js",
+    "b-c-p-pdf-pn-s.js",
+    "c-p-pdf-pn-s.js",
+    "c-p-pdf-pn.js",
+    "pn.css",
+    "pn.js"
+  ],
+  "options_page": "settings.html",
+  "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx"
+}
